@@ -1,0 +1,17 @@
+### 3. Short Write-up (Methodology, Insights, Strategies)
+
+
+#### **Methodology**
+1. **Data Integration:** Unified daily sentiment data with granular Hyperliquid transaction logs by synchronizing Unix timestamps (seconds vs. milliseconds) and normalizing to UTC dates.
+2. **Feature Engineering:** Developed metrics for "Win Rate," "Long Bias," and "Position Aggression" (Size USD).
+3. **Comparative Analysis:** Grouped data into three regimes (Fear, Greed, Neutral) to identify statistical shifts in performance.
+
+#### **Key Insights**
+* **Neutrality is the Risk Zone:** Neutral sentiment (Index 45-55) yielded the lowest win rate (31.7%) and highest average drawdown. Markets without a clear emotional trend are the most difficult for traders to navigate.
+* **The "Fear" Dip-Buying Bias:** Traders on Hyperliquid significantly increase their position sizes during **Fear** (Avg: \$5,260) compared to **Greed** (Avg: \$3,581). This suggests the platform is a primary venue for "bottom fishers."
+* **Greed Efficiency:** While Fear drives the most volume, **Greed** days are the most efficient for profit, offering a 4% higher win rate than Fear days.
+
+#### **Strategy Recommendations**
+* **Rule 1 (The Neutral Filter):** During Neutral sentiment days, traders should reduce position sizes by 50% or avoid trading high-leverage perps to prevent "chop" losses.
+* **Rule 2 (Size Up into Fear):** Leverage the discovered "Dip-Buying" edge by increasing trade conviction only when the Fear/Greed Index drops below 30, mimicking the behavior of the "Consistent Winner" segment.
+* **Rule 3 (The Greed Exit):** As win rates peak in Greed, traders should implement trailing stops rather than opening new positions, as the data shows "Extreme Greed" often leads to diminishing marginal returns.
